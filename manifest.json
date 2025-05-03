@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Bug Reporter",
+    "version": "1.0",
+    "description": "Flag broken buttons and send reports to Supabase",
+    "permissions": ["storage", "activeTab", "scripting"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": "icons/logo.png"
+    }
+  }
+  
